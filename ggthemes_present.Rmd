@@ -1,0 +1,27 @@
+---
+title: "ggplot2_themes_summary"
+author: "Yangjw"
+date: "2020年12月12日"
+output: html_document
+---
+
+1. ggthemes
+```{r setup, include=FALSE}
+suppressPackageStartupMessages(library(ggthemes))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(purrr))
+
+df <- data.frame( x=1:50, y=rnorm(50,mean=5,sd=1), z=sample(x=LETTERS[1:4],50,replace = T) )
+
+element.names <- c("base","calc","clean","economist","excel","excel_new","few","fivethirtyeight","foundation","gdocs","hc","igray","map","pander","par","solarized","solid","stata","tufte","wsj")
+
+lapply( element.names, function(x){
+  ggplot(df,aes(x,y,color=z))+geom_point() + eval(parse(text=paste0("theme_",x,"()")))
+} )
+
+# map.ggthemes <- map(paste0("theme_",element.names), ~{ggplot(df,aes(x,y,color=z))+
+#     geom_point()+eval(parse( text=.x ))})
+
+# ggplot(df,aes(x,y,color=z)) + geom_point() + eval(parse(text="theme_few()"))
+
+```
