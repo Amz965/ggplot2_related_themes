@@ -6,16 +6,11 @@ output:
   html_document:
     keep_md: true
 ---
-```{r, include=F}
-# knitr::opts_chunk$set(fig.path="ggplot2_themes_figs/themes-",include=FALSE)
-Sys.setlocale('LC_ALL','C')
 
-suppressPackageStartupMessages(library(extrafont))
-loadfonts(device = "win")
-```
 
 ## 0. ggplot2 default.
-```{r,fig.width=12,fig.height=10,warning=F}
+
+```r
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(patchwork))
 suppressPackageStartupMessages(library(purrr))
@@ -53,8 +48,11 @@ map.ggplot2[[13]] <- map.ggplot2[[12]]+theme_grey() %+replace%
 wrap_plots( map.ggplot2, ncol = 4 )
 ```
 
+![](ggthemes_present_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+
 ## 1. ggthemes
-```{r,fig.width=30,fig.height=25}
+
+```r
 suppressPackageStartupMessages(library(ggthemes))
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(patchwork))
@@ -72,9 +70,19 @@ map.ggthemes <- map( element.names, ~{
 wrap_plots( map.ggthemes, ncol = 5 )
 ```
 
+![](ggthemes_present_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+
 ## 2. ggpubr
-```{r,fig.width=8,fig.height=4}
+
+```r
 suppressPackageStartupMessages(library(ggpubr))
+```
+
+```
+## Warning: package 'ggpubr' was built under R version 3.6.2
+```
+
+```r
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(patchwork))
 suppressPackageStartupMessages(library(purrr))
@@ -89,8 +97,11 @@ map.ggpubr <- map( element.names, ~{
 wrap_plots( map.ggpubr, ncol = 2 )
 ```
 
+![](ggthemes_present_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+
 ## 3. hrbrthemes
-```{r,fig.height=10,fig.width=25,warning=F}
+
+```r
 suppressPackageStartupMessages(library(ggsci))
 suppressPackageStartupMessages(library(hrbrthemes))
 suppressPackageStartupMessages(library(patchwork))
@@ -107,3 +118,5 @@ map.hrbrthemes <- map2( element.names, scale.color, ~{
 
 wrap_plots( map.hrbrthemes, ncol = 4 )
 ```
+
+![](ggthemes_present_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
