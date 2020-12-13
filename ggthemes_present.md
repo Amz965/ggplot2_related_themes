@@ -76,13 +76,6 @@ wrap_plots( map.ggthemes, ncol = 5 )
 
 ```r
 suppressPackageStartupMessages(library(ggpubr))
-```
-
-```
-## Warning: package 'ggpubr' was built under R version 3.6.2
-```
-
-```r
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(patchwork))
 suppressPackageStartupMessages(library(purrr))
