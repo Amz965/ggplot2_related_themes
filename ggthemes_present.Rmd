@@ -2,9 +2,7 @@
 title: "ggplot2_themes_summary"
 author: "Yangjw"
 date: "2020年12月12日"
-output: 
-  html_document:
-    keep_md: true
+output: rmarkdown::github_document
 ---
 ```{r, include=F}
 # knitr::opts_chunk$set(fig.path="ggplot2_themes_figs/themes-",include=FALSE)

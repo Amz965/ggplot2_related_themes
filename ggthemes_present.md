@@ -1,16 +1,12 @@
----
-title: "ggplot2_themes_summary"
-author: "Yangjw"
-date: "2020年12月12日"
-output: 
-  html_document:
-    keep_md: true
----
+ggplot2\_themes\_summary
+================
+Yangjw
+2020年12月12日
 
+0. ggplot2 default.
+-------------------
 
-## 0. ggplot2 default.
-
-```r
+``` r
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(patchwork))
 suppressPackageStartupMessages(library(purrr))
@@ -48,11 +44,12 @@ map.ggplot2[[13]] <- map.ggplot2[[12]]+theme_grey() %+replace%
 wrap_plots( map.ggplot2, ncol = 4 )
 ```
 
-![](ggthemes_present_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![](ggthemes_present_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
-## 1. ggthemes
+1. ggthemes
+-----------
 
-```r
+``` r
 suppressPackageStartupMessages(library(ggthemes))
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(patchwork))
@@ -70,11 +67,12 @@ map.ggthemes <- map( element.names, ~{
 wrap_plots( map.ggthemes, ncol = 5 )
 ```
 
-![](ggthemes_present_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](ggthemes_present_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
-## 2. ggpubr
+2. ggpubr
+---------
 
-```r
+``` r
 suppressPackageStartupMessages(library(ggpubr))
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(patchwork))
@@ -90,11 +88,12 @@ map.ggpubr <- map( element.names, ~{
 wrap_plots( map.ggpubr, ncol = 2 )
 ```
 
-![](ggthemes_present_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](ggthemes_present_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
-## 3. hrbrthemes
+3. hrbrthemes
+-------------
 
-```r
+``` r
 suppressPackageStartupMessages(library(ggsci))
 suppressPackageStartupMessages(library(hrbrthemes))
 suppressPackageStartupMessages(library(patchwork))
@@ -112,4 +111,4 @@ map.hrbrthemes <- map2( element.names, scale.color, ~{
 wrap_plots( map.hrbrthemes, ncol = 4 )
 ```
 
-![](ggthemes_present_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](ggthemes_present_files/figure-markdown_github/unnamed-chunk-5-1.png)
